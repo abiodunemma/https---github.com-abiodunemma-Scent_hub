@@ -6,7 +6,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/body', function () {
-    return view('body');
-});
+Route::get('/body', [App\Http\Controllers\ScentController::class, 'index']);
+Route::get('/body/{id}', [App\Http\Controllers\ScentController::class, 'show']);
 
