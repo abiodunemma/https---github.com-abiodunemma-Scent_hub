@@ -30,7 +30,14 @@ $scents = Scent::latest()->get();
       }
     
         public function show($id) {
-          return view('show', ['id'  => $id ]);
+          $scent = Scent::findOrFail($id);
+       //  $scent = Scent::find($id);
+          return view('show', ['scent' => $scent]);
+
+        }
+        public function create() {
+    
         }
     }
+
 
