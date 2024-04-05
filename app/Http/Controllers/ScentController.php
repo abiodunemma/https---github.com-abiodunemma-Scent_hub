@@ -36,8 +36,37 @@ $scents = Scent::latest()->get();
 
         }
         public function create() {
-    
+    return view('input.create');
         }
-    }
+
+        public function love() {
+          return view('body.love');
+              }
+
+              public function store() {
+
+                $scent = new Scent();
+
+            $scent->name = request('name');
+            $scent->type = request('type');
+            $scent->amount = request('amount');
+            $scent->price = request('price');
+
+            $scent->save();
+
+
+                return redirect('/')->with('mssg', 'Thanks for order');
+                    }
+      public function destroy($id) {
+        $scent = Scent::findOrFail($id);
+        $scent->delete();
+
+        return redirect('/body');
+
+      }
+
+}
+
+    
 
 
