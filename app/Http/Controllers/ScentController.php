@@ -8,6 +8,10 @@ use App\Models\Scent;
 
 class ScentController extends Controller
 {
+  //public function __construct(){
+   // $this->middleware('auth');
+
+  //}
     public function index() {
 
       //$scents = Scent::orderBy('name')->get();
