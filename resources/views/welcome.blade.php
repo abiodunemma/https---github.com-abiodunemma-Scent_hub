@@ -20,7 +20,7 @@
 </header>
 <a href="/input/create">make order</a>
 
-<img src="img/okay.jpg" alt="faerga">
+
 
 <p class="mssg">{{ session('mssg') }}</p>
 
