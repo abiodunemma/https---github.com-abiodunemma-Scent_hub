@@ -18,5 +18,9 @@ Route::get('users/{id?}', 'APIController@getUser');
 Route::post('add-users','APIController@addUsers');
 
 //POST API -add mutiple data 
-Route::post('add-multiple-users','APIController@MultipleUsers');
+Route::post('add-multiple-users','APIController@addMultipleUsers');
+
+
+//PUT API  update record
+Route::put('update-user-details','APIController@updateUserDetails');
 });
